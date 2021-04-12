@@ -4,7 +4,7 @@
   "main": "./src/server.js",
   "author": "Hadriel Benjo",
   "type": "module",
-  "license": "unlicensed",
+  "license": "ISC",
   "scripts": {
     "start": "node --experimental-json-modules ./src/server.js",
     "watch": "nodemon --experimental-json-modules ./src/server.js",
