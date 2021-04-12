@@ -1,5 +1,17 @@
 # NodeJS Server - ES6 Code
 
+## Running:
+
+| script  | command                |
+| ------- | ---------------------- |
+| install | `npm install`          |
+| lint    | `npm run script lint`  |
+| start   | `npm run script start` |
+| watch   | `npm run script watch` |
+
+
+## Description and Review
+
 Running Nodejs Server ES6 code without any bundle operation (like webpack, rollup, ...etc) <br>
 
 Support in the new feature of nodejs from nodejs v14+ <br>
