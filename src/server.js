@@ -3,18 +3,14 @@ import http from 'http';
 import app from './app.js';
 
 // example how to import json file (await will sync the import!, in general import is async/promise)
-const packageJson = await import('../package.json');
-console.log(packageJson);
+const { default: jsonObj } = await import('./test.json');
+console.log('import json file\n', JSON.stringify(jsonObj, null, 4));
 
 const server = http.createServer(app);
 
 const PORT = 4000;
 server.listen(PORT, async () => {
-	console.log(
-		!process.env.environment || process.env.environment === 'local'
-			? `Listening to http://localhost:${PORT}/`
-			: `Listening on port ${PORT}`
-	);
+	console.log(`Listening to http://localhost:${PORT}/`);
 });
 
 server.on('uncaughtException', (req, res, next, err) => {

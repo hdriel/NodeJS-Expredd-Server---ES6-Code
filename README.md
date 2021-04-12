@@ -30,9 +30,23 @@ import app from './app.js';
 Import JSON files are ugly, but the example how to import json file <br>
 you need to synchronize your imports with await. (in general import is async/promise) <br>
 example: <br>
+
+`./src/test.json`
+```json
+{
+	"hello": "world"
+}
+```
 ```js
-const packageJson = await import('../package.json');
-console.log(packageJson);
+const { default: jsonObj } = await import('./test.json');
+console.log('imported json file\n', JSON.stringify(jsonObj, null, 4));
+```
+```text
+OUTPUT:
+imported json file
+ {
+    "hello": "world"
+}
 ```
 
 AND you need to expilicy run node with the following flag <br>
