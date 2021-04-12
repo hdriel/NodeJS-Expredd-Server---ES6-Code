@@ -114,4 +114,20 @@ example: <br>
 
 <br>
 
+## __dirname & __filename
+Currently, In till Node v14 the current location you get from `import.meta.url` <br>
+and in url format, it's a format of: file://C:\file-path <br>
+in future (Node v15+) it's will be more easily with: import.meta.dirname <br>
+but now you need to do this: <br>
+
+```js
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __filename = path.basename(fileURLToPath(import.meta.url));
+console.log('__dirname = ', __dirname);
+console.log('__filename = ', __filename);
+```
+
 Enjoy
