@@ -1,6 +1,6 @@
 /*
  * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/en/configuration.html
+ * https://jestjs.io/docs/configuration
  */
 
 export default {
@@ -11,7 +11,7 @@ export default {
 	// bail: 0,
 
 	// The directory where Jest should store its cached dependency information
-	// cacheDirectory: "C:\\Users\\hadrielbenjo\\AppData\\Local\\Temp\\jest",
+	// cacheDirectory: "/private/var/folders/bw/_1dy35b52kdbszs337sb0jyr0000gn/T/jest_dx",
 
 	// Automatically clear mock calls and instances between every test
 	clearMocks: true,
@@ -27,18 +27,18 @@ export default {
 
 	// An array of regexp pattern strings used to skip coverage collection
 	// coveragePathIgnorePatterns: [
-	//   "\\\\node_modules\\\\"
+	//     "/node_modules/"
 	// ],
 
 	// Indicates which provider should be used to instrument code for coverage
-	// coverageProvider: "babel",
+	coverageProvider: 'v8',
 
 	// A list of reporter names that Jest uses when writing coverage reports
 	// coverageReporters: [
-	//   "json",
-	//   "text",
-	//   "lcov",
-	//   "clover"
+	//     "json",
+	//     "text",
+	//     "lcov",
+	//     "clover"
 	// ],
 
 	// An object that configures minimum threshold enforcement for coverage results
@@ -67,17 +67,17 @@ export default {
 
 	// An array of directory names to be searched recursively up from the requiring module's location
 	// moduleDirectories: [
-	//   "node_modules"
+	//     "node_modules"
 	// ],
 
 	// An array of file extensions your modules use
 	// moduleFileExtensions: [
-	//   "js",
-	//   "json",
-	//   "jsx",
-	//   "ts",
-	//   "tsx",
-	//   "node"
+	//     'js',
+	//     'jsx',
+	//     'ts',
+	//     'tsx',
+	//     'json',
+	//     'node'
 	// ],
 
 	// A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
@@ -118,7 +118,7 @@ export default {
 
 	// A list of paths to directories that Jest should use to search for files in
 	// roots: [
-	//   "<rootDir>"
+	//     "<rootDir>"
 	// ],
 
 	// Allows you to use a custom runner instead of Jest's default test runner
@@ -137,7 +137,7 @@ export default {
 	// snapshotSerializers: [],
 
 	// The test environment that will be used for testing
-	testEnvironment: 'node',
+	// testEnvironment: "jest-environment-node",
 
 	// Options that will be passed to the testEnvironment
 	// testEnvironmentOptions: {},
@@ -146,16 +146,14 @@ export default {
 	// testLocationInResults: false,
 
 	// The glob patterns Jest uses to detect test files
-	testMatch: [
-		'**/?(*.)+(spec|test).[tj]s?(x)'
-	],
-	//   "**/__tests__/**/*.[jt]s?(x)",
-	//   "**/?(*.)+(spec|test).[tj]s?(x)"
+	// testMatch: [
+	//     "**/__tests__/**/*.[jt]s?(x)",
+	//     "**/?(*.)+(spec|test).[tj]s?(x)"
 	// ],
 
 	// An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
 	// testPathIgnorePatterns: [
-	//   "\\\\node_modules\\\\"
+	//     "/node_modules/"
 	// ],
 
 	// The regexp pattern or array of patterns that Jest uses to detect test files
@@ -165,7 +163,7 @@ export default {
 	// testResultsProcessor: undefined,
 
 	// This option allows use of a custom test runner
-	// testRunner: "jasmine2",
+	// testRunner: "jest-circus/runner",
 
 	// This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
 	// testURL: "http://localhost",
@@ -174,14 +172,12 @@ export default {
 	// timers: "real",
 
 	// A map from regular expressions to paths to transformers
-	transform: {
-		'^.+\\.jsx?$': 'babel-jest'
-	}
+	transform: {},
 
 	// An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
 	// transformIgnorePatterns: [
-	//   "\\\\node_modules\\\\",
-	//   "\\.pnp\\.[^\\\\]+$"
+	//     "/node_modules/",
+	//     "\\.pnp\\.[^\\/]+$"
 	// ],
 
 	// An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
